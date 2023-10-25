@@ -1,3 +1,5 @@
 Django
 uwsgi
 PyMySQL
+opencv-python
+imutils
