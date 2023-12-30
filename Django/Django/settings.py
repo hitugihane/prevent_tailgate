@@ -54,7 +54,8 @@ ROOT_URLCONF = 'Django.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        # 以下templatesを適用させるために追記
+        'DIRS': [BASE_DIR, 'PREVENT_TAILGATE/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -116,6 +117,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
+# 以下staticを適用させるために追記
+STATICFILES_DIRS = [ BASE_DIR / 'PREVENT_TAILGATE/static/']
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field

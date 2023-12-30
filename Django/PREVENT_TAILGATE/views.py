@@ -1,10 +1,11 @@
 from django.http import HttpResponse
 from django.views import View
+from django.shortcuts import render
 import cv2
 import winsound
 
 def index(request):
-    return HttpResponse("Hello, world. You're at the polls index.")
+    return render(request, 'PREVENT_TAILGATE/index.html')
   
 class FaceDetector(View):
   def is_overlapping(self, rect1, rect2, threshold=0.5):
